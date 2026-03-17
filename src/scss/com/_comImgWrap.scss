@@ -1,0 +1,151 @@
+/* --------------------------- 일반 텍스트 --------------------------- */
+.comImgWrap {
+    margin-top: 32px;
+    &:first-child {margin-top: 0;}
+    .imgGroup {
+        width: 100%; display: flex; align-items: stretch; flex-wrap: wrap;
+        .imgArea {
+            flex: 0 0 100%; overflow: hidden; line-height: 1; text-align: center;
+            img {
+                width: 100%; max-width: 100%; border: 1px solid var(--border-color-G300, #D6DBE1); border-radius: 12px; display: block; overflow: hidden;
+            }
+            .imgTxt {
+                margin-top: 12px; font-size: rem(16px); color: var(--text-color-G800, #24272D); line-height: 160%; text-align: center; word-break: keep-all; display: inline-block;
+
+                a {
+                    &[target="_blank"] {
+                        &::after {
+                            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/common/images/common/ic_16_link.svg') no-repeat 50% 50%; vertical-align: middle; padding-left: 4px;
+                        }
+                    }
+                }
+            }
+            &.noBdr {
+                img {border: 0;}
+            }
+        }
+    }
+    @include media('mobile') {
+        margin-top: 24px;
+        &:first-child {margin-top: 0;}
+        .imgGroup {
+            .imgArea {
+                .imgTxt {
+                    font-size: rem(15px);
+                }
+            }
+        }
+    }
+    &.col2 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(50% - 12px);
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    } 
+    &.col3 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(33.3333% - 16px);
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    } 
+    &.col4 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(25% - 18px);
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    // 이미지 & 텍스트 가로 버전
+    &.imgTxtBox {
+        display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 40px;
+        .imgGroup {
+            width: 580px;
+            .imgArea {
+                width: 580px; 
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column;
+        }
+    } 
+
+    // 이미지 & 텍스트 가로 버전 2
+    &.imgTxtBox2 {
+        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 12px 40px;
+        .imgGroup {
+            width: 384px;
+            .imgArea {
+                width: 580px; 
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column;
+        }
+    }
+
+    // 이미지 & 텍스트 가로 버전 3
+
+    &.imgTxtBox3 {
+        display:flex; flex-direction: row; justify-content: flex-start; gap:40px;
+        .imgGroup {
+            width: 580px;
+            .imgArea {
+                width: 580px; 
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column;
+        }
+    }
+}
+

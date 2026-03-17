@@ -1,0 +1,30 @@
+@import '../../scss/com/maxin';
+@import '../../scss/var/var';
+
+/* --------------------------- 서브상단 정보상자 --------------------------- */
+.comSubInfo {
+    width: 100%; padding: 40px; border-radius: 12px; background: var(--bg-color-B100, #EEF7FF);
+    .infoText {
+        color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+        em {
+            color: var(--color-primary-blue-900, #0A4991); font-weight: 600;
+        }
+    }
+    .descList {
+        .descItem {
+            @extend .varBTextList;
+
+            > em {
+                &.blue {
+                    color:var(--color-primary-blue-900);
+                }
+            }
+        }
+    }
+    @include media('mobile') {
+        padding: 24px;
+        .infoText {
+            font-size: rem(17px);
+        }
+    }
+}

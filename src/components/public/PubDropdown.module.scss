@@ -1,0 +1,58 @@
+/* --------------------------- 드롭다운 --------------------------- */
+@import '../../scss/com/maxin';
+
+.pubDropdown {
+
+    // 기본형
+    // 드롭다운 (gnb & breadcrumb)
+    display: flex; flex-direction: column; width: max-content; position: relative;
+
+    .btnDrop {
+        display: flex; align-items: center; justify-content: space-between; flex-direction: row; font-size: rem(15px); color: var(--text-color-G600); font-weight: 400;
+
+        &::after {
+            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/common/images/common/ic_14_gnb_arr_down.svg') no-repeat center / contain; vertical-align: middle; margin: 2px 0 0 4px; transition: transform 0.3s ease;
+        }
+
+        &.open {
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .dropMenu {
+        border-radius: 12px; border: 1px solid var(--border-color-G400); background: #fff; box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.20); padding: 16px; width: max-content; max-width: 250px;
+        position: absolute; left: 50%; transform: translateX(-50%); top: 30px; z-index: 20;
+        
+        > li {
+            text-align: center;
+
+            > a {
+                display: inline-block; color: var(--text-color-G700); text-align: center; font-size: rem(15px); font-weight: 400; line-height: 160%; color: var(--text-color-G700); transition: color 0.2s ease;
+
+                &:hover {
+                    color: var(--text-color-B500) !important;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+        }
+    }
+
+    // 드롭다운 (location)
+    &.pubDropdownLocn {
+        .btnDrop {
+            color: var(--text-color-G700); font-size: rem(16px); font-weight: 400; line-height: 160%;
+
+            &::after {
+                content: ''; display: inline-block; width: 20px; height: 20px; background: url('/common/images/common/ic_20_location_arr.svg') no-repeat center / contain; vertical-align: middle; margin: 2px 0 0 4px; transition: transform 0.3s ease;
+            }
+        }
+    }
+
+}

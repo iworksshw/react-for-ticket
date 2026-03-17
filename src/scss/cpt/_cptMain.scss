@@ -1,0 +1,499 @@
+.cptMain {
+    width: 100%;
+    .mainArea {
+        width: 100%; padding: 0 60px; max-width: 1920px; margin: 0 auto;
+        .visualGroup {
+            .visualSwiperContainer {
+                width: 100%; position: relative;
+                .visualSwiperM {
+                    width: 100%; padding: 40px 0 28px; overflow: hidden; position: absolute; left: 0; top: -9000px;
+                    .swiper-wrapper {
+                        height: auto;
+                        .swiper-slide {
+                            width: 100%;  height: 152px;
+                        }
+                    }
+                    .link {
+                        width: 100%; display: block;
+                        .msg {
+                            dt {
+                                color: #222; font-size: 32px; font-weight: 700; line-height: 1.35; letter-spacing: -0.64px; text-align: left;
+                            }
+                            dd {
+                                margin-top: 12px; color: #666; font-size: 20px; font-weight: 400; line-height: 1.35; text-align: left;
+                            }
+                        }
+                    }
+                }
+                .slideUnit {
+                    width: 100%; display: flex; align-items: center; justify-content: flex-end; gap: 20px; position: absolute; left: 0; bottom: 0;
+                    .autoplay-progress {
+                        width: 120px; height: 4px; border-radius: 2px; background-color: #dedede; position: absolute; right: 76px; bottom: 38px; overflow: hidden;
+                        svg {
+                            --progress: 0; position: absolute; left: 0; top: 0; z-index: 10; width: 100%; stroke-width: 8px; stroke: #32327F;
+                            fill: none; stroke-dashoffset: calc(120 * (1 - var(--progress))); stroke-dasharray: 120;
+                        }
+                    }
+                    .swiper-pagination {
+                        width: 184px; font-size: 0; color: #fff; position: absolute; left: auto; right: 44px; bottom: 28.5px; display: flex; 
+                        justify-content: space-between; align-items: center;
+                        .swiper-pagination-total {color: #666; font-size: 20px; font-weight: 400;}
+                        .swiper-pagination-current {color: #222; font-size: 20px; font-weight: 700;}
+                    }
+                    .swiperNavi {
+                        width: 100%; position: absolute; left: 0; bottom: 0; z-index: 10;
+                        & > div {
+                            width: 64px; height: 64px; border-radius: 50%; position: absolute; bottom: 319px; top: auto;
+                            &.swiper-button-prev {
+                                background:rgba(0,0,0,0.6) url(/resource/images/main//ic_36_arr_l.svg) center no-repeat; left: 30px; cursor: pointer;
+                            }
+                            &.swiper-button-next {
+                                background:rgba(0,0,0,0.6) url(/resource/images/main//ic_36_arr_r.svg) center no-repeat; right: 30px; cursor: pointer;
+                            }
+                            &::after {display: none;}
+                            &::before {display: none;}
+                        }
+                    }
+                }
+                .visualSwiper {
+                    width: 100%; height: 700px; border-radius: 40px; mask-image: url(/resource/images/main//mask_mainvisual.svg); mask-size: cover; mask-repeat: no-repeat; mask-position: right; position: relative; overflow: hidden;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            
+                        }
+                    }
+                    .link {
+                        width: 100%; height: 100%; display: block; position: relative;
+                        .msg {
+                            width: calc(84% - 60px); position: absolute; bottom: 100px; left: 16%; 
+                            dt {
+                                color: #FFF; font-size: 52px; font-weight: 700; line-height: 1.35; text-align: left;
+                            }
+                            dd {
+                                color: #FFF; font-size: 24px; font-weight: 400; line-height: 1.35; text-align: left;
+                            }
+                        }
+                        .image {
+                            width: 100%; height: 100%;
+                            img {
+                                width: 100%; height: 100%; object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contGroup {
+            width: 100%; margin-top: 100px;
+            
+            .noticeArea {
+                width: 100%; max-width: 1200px; margin: 0 auto;
+                .title {
+                    width: 100%; display: flex; justify-content: space-between; align-items: center;
+                    h3 {
+                        color: #222; font-size: 28px; font-weight: 700; line-height: normal;
+                    }
+                    .more {
+                        width: max-content; padding-right: 20px; font-size: 16px; font-weight: 400; color: #666; white-space: nowrap;
+                        background: url(/resource/images/main//ic_12_more.svg) center right no-repeat; display: block;
+                        &:hover {color: #666 !important;}
+                    }
+                }
+                .noticeList {
+                    width: 100%; height: 460px; margin-top: 24px; display: flex; flex-direction: column;  flex-wrap: wrap; justify-content: space-between; gap: 0 40px;
+                    .item {
+                        width: 537px; height: 128px;
+
+                        &:first-child {
+                            width: 623px; height: 100%; border-radius: 20px; overflow: hidden;
+                            a {
+                                gap: 0; position: relative;
+                            }
+                            .image {
+                                width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 0;
+                            }
+                            .text {
+                                width: 100%; height: 224px; padding: 89px 36px 0; position: absolute; left: 0; bottom: 0; z-index: 1; 
+                                background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%);
+                                .tit {
+                                    width: 100%; height: auto; margin-top: 0; color: #fff; font-size: 24px; font-weight: 700; line-height: 31px; @include line1();
+                                }
+                                .msg {width: 100%; height: auto; margin-top: 12px; color: #fff; font-size: 16px; font-weight: 400; line-height: 20px; display: block; @include line1();}
+                                .date {margin-top: 12px; color: #fff; line-height: 20px; opacity: 0.6; display: block;}
+                            }
+                        }
+                        a {
+                            width: 100%; height: 100%; display: flex; gap: 24px;
+                        }
+                        .image {
+                            width: 192px; height: 128px; flex-grow: 0; flex-shrink: 0; border-radius: 12px;
+                            img {width: 100%; height: 100%; object-fit: cover; object-position: top;}
+                        }
+                        .text {
+                            width: 100%;
+                            .tit {
+                                width: 100%; height: 54px; margin-top: 15px; line-height: 27px; @include line(2);
+                            }
+                            .msg {display: none;}
+                            .date {width: 100%; margin-top: 16px; color: #666; font-family: Roboto; font-size: 16px; font-weight: 400; line-height: normal; display: block;}
+                        }
+                    }
+                }
+            }
+
+            .infoArea {
+                width: 100%; max-width: 1800px; margin: 124px auto 0; border-radius: 40px; 
+                background: url(/resource/images/main/main_info_bg.jpg) center top no-repeat; background-size: cover;
+                .infoBox {
+                    width: 100%; max-width: 1200px; padding-top: 120px; margin: 0 auto;
+                    .title {
+                        dt {
+                            color: #FFF; font-size: 36px; font-weight: 700; line-height: 49px;
+                        }
+                        dd {
+                            width: 100%; margin-top: 12px; color: rgba(255, 255, 255, 0.80); font-size: 18px; font-weight: 400; line-height: 24px;
+                        }
+                    }
+                    .infoList {
+                        width: 100%; overflow: hidden;
+                        .swiper-wrapper {
+                            width: 100%; padding: 60px 0 120px; display: flex; justify-content: space-between; 
+                        }
+                        .swiper-slide {
+                            width: calc(25% - 15px); 
+                            &:hover {
+                                .card {background: #fff; transform: translate(0, -20px);}
+                                .eyebrow {color: #4E63E3;}
+                                dl {
+                                    dt {color: #222; text-shadow: none;}
+                                    dd {color: #666;}
+                                }
+                                .link {color: #666; background: url(/resource/images/main//ic_12_more.svg) center right no-repeat;}
+                            }                         
+                            .card {
+                                width: 100%; height: 100%; padding: 60px 28px; border-radius: 20px; background: rgba(0, 0, 0, 0.60); transition: all 0.3s;
+                            }
+                            .eyebrow {
+                                width: 100%; color: #A1AFFF; font-size: 16px; font-style: normal; font-weight: 700; line-height: 19px; transition: all 0.3s;
+                            }
+                            dl {
+                                width: 100%; margin-top: 24px;
+                                dt {
+                                    width: 100%; color: #FFF; text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25); font-size: 24px; font-style: normal; 
+                                    font-weight: 700; line-height: 32px; transition: all 0.3s;
+                                }
+                                dd {
+                                    width: 100%; margin-top: 12px; color: rgba(255, 255, 255, 0.70); font-size: 16px; font-style: normal; 
+                                    font-weight: 400; line-height: 22px; transition: all 0.3s;
+                                }
+                            }
+                            .link {
+                                width: max-content; margin-top: 36.5px; padding-right: 20px; font-size: 16px; font-weight: 400; color: #fff; white-space: nowrap; 
+                                background: url(/resource/images/main//ic_12_more_w.svg) center right no-repeat; display: block; transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tabArea {
+                width: 100%; max-width: 1200px; margin: 136px auto 0;
+                .tabMenuGroup {
+                    width: 100%; display: flex; justify-content: space-between;
+                    .tabMenu {
+                        width: max-content; display: flex; gap: 24px; background: none; float: none;
+                        .tabItem {
+                            width: max-content; position: relative;
+                            .tabName {
+                                width: max-content; color: #666; font-size: 28px; font-weight: 500; line-height: 34px; background: none;
+                                &.on {
+                                    color: #222; font-weight: 700;
+                                    &::before {
+                                        content:""; width: 10px; height: 10px; border-radius: 50%; background: #4250A3; position: absolute; left: calc(50% - 5px); top: -16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .more {
+                        width: max-content; padding-right: 20px; font-size: 16px; font-weight: 400; color: #666; white-space: nowrap; 
+                        background: url(/resource/images/main//ic_12_more.svg) center right no-repeat; display: block; align-self: center;
+                    }
+                }
+                .tabContianer {
+                    width: 100%; margin-top: 40px;
+                }
+                .mainTabSwiper {
+                    width: 100%; overflow: hidden;
+                    .swiper-wrapper {
+                        width: 100%; display: flex; justify-content: space-between;
+                        .swiper-slide {
+                            width: calc(25% - 30px); margin-left: 40px;
+                            &:first-child {margin-left: 0;}
+                            .eyebrow {
+                                width: max-content; min-width: 80px; height: 33px; padding: 6px 12px; border-radius: 8px; border: 1px solid #B8CEFF; align-self: center;
+                                color: #4250A3; font-size: 16px; font-style: normal; font-weight: 700; line-height: 19px; display: block;
+                            }
+                            .link {
+                                width: 100%; display: block;
+                            }
+                            dl {
+                                width: 100%; margin-top: 12px;
+                                dt {
+                                    width: 100%; height: 54px; color: #222; font-size: 20px; font-weight: 500; line-height: 27px; @include line(2);
+                                }
+                                dd {
+                                    width: 100%; height: 44px; margin-top: 12px; color: #666; font-size: 16px; font-weight: 400; line-height: 22px; @include line(2);
+                                }
+                            }
+                            .date {
+                                width: 100%; margin-top: 24px; color: #666; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal; display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+    
+    @include media("tablet") {
+        .mainArea {
+            padding: 0 20px;
+            .visualGroup {
+                .visualSwiperContainer {
+                    .slideUnit {
+                        .autoplay-progress {
+                            width: 90px; right: 52px; bottom: 23px;
+                            svg {
+                                stroke-width: 12px;
+                            }
+                        }
+                        .swiper-pagination {
+                            width: 145px; right: 24px; bottom: 14px;
+                            .swiper-pagination-total {font-size: 18px;}
+                            .swiper-pagination-current {font-size: 18px;}
+                        }
+                        .swiperNavi {
+                            & > div {
+                                bottom: 229px;
+                            }
+                        }
+                    }
+                    .visualSwiper {
+                        height: 500px; border-radius: 30px;
+                        .link {
+                            .msg {
+                                width: calc(90% - 30px); left: 10%;
+                                dt {
+                                    font-size: 34px;
+                                }
+                                dd {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contGroup {
+                .noticeArea {
+                    .noticeList {
+                        height: auto; flex-direction: row; gap: 40px 0;
+                        .item {
+                            width: 100%; height: 123px;
+
+                            &:first-child {
+                                width: 100%; height: 460px; 
+                                a {
+                                    gap: 0; position: relative;
+                                }
+                                .image {
+                                    img {width: 100%; height: 100%; object-fit: cover; object-position: top;}
+                                }
+                            }
+                        }
+                    }
+                }
+                .infoArea {
+                    width: calc(100% + 40px); margin-left: -20px; border-radius: 0;
+                    .infoBox {
+                        padding: 120px 20px 0;
+                        .title {padding: 0 20px;}
+                        .infoList {
+                            .swiper-wrapper {
+                                padding: 60px 0 120px; //gap: 20px; overflow-x: auto;
+                            }
+                            .swiper-slide {
+                                width: 285px; margin-left: 20px; flex-grow: 0; flex-shrink: 0;
+                                &:first-child {margin-left: 0;}
+                                &:hover {
+                                    .card {background: rgba(0, 0, 0, 0.60); transform: translate(0, 0);}
+                                    .eyebrow {color: #A1AFFF;}
+                                    dl {
+                                        dt {color: #FFF; text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);}
+                                        dd {color: rgba(255, 255, 255, 0.70);}
+                                    }
+                                    .link {color: #fff; background: url(/resource/images/main//ic_12_more_w.svg) center right no-repeat;}
+                                }  
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+    @include media("mobile") {
+        .mainArea {
+            .visualGroup {
+                .visualSwiperContainer {
+                    .visualSwiperM {
+                        position: static;
+                    }
+                    
+                    .slideUnit {
+                        .autoplay-progress {
+                            width: 60px; right: 47px; bottom: 23px;
+                            svg {
+                                stroke-width: 16px;
+                            }
+                        }
+                        .swiper-pagination {
+                            width: 107px; right: 24px; bottom: 14px;
+                            .swiper-pagination-total {font-size: 18px;}
+                            .swiper-pagination-current {font-size: 18px;}
+                        }
+                        .swiperNavi {display: none;}
+                    }
+                    .visualSwiper {
+                        height: 300px; border-radius: 20px; mask-image: url(/resource/images/main//mask_mainvisual_m.svg);
+                        .link {
+                            .msg {display: none;}
+                        }
+                    }
+                }
+            }
+            .contGroup {
+                margin: 60px auto 0;
+                .noticeArea {
+                    .noticeList {
+                        gap: 20px 0;
+                        .item {
+                            height: 80px;
+                            &:first-child {
+                                width: 100%; height: 247px; border-radius: 16px;
+                                a {
+                                    gap: 16px; position: relative;
+                                }
+                                .text {
+                                    height: 133px; padding: 40px 31px 0;
+                                    .tit {
+                                        height: 53px; font-size: 18px; line-height: 27px; @include line(2);
+                                    }
+                                    .msg {display: none}
+                                    .date {margin-top: 4px; font-size: 14px; line-height: 16px;}
+                                }
+                            }
+                            .image {
+                                width: 120px; height: 80px; border-radius: 8px;
+                            }
+                            .text {
+                                .tit {
+                                    height: 48px; margin-top: 4px; line-height: 24px;
+                                }
+                                .date {margin-top: 8px; font-size: 14px;}
+                            }
+                        }
+                    }
+                }
+
+                .infoArea {
+                    margin: 60px auto 0; margin-left: -20px;
+                    .infoBox {
+                        padding: 60px 20px 0;
+                        .title {
+                            dt {font-size: 28px; line-height: 38px;}
+                            dd {font-size: 16px; line-height: 22px;}
+                        }
+                        .infoList {
+                            .swiper-wrapper {
+                                padding: 40px 0 60px; 
+                            }
+                            .swiper-slide {      
+                                width: 240px;                 
+                                .card {padding: 44px 20px;}
+                                .eyebrow {font-size: 14px; line-height: 17px;}
+                                dl {
+                                    margin-top: 20px;
+                                    dt {font-size: 20px; line-height: 27px;}
+                                    dd {margin-top: 8px; font-size: 14px; line-height: 19px;}
+                                }
+                                .link {margin-top: 28px; font-size: 14px;}
+                            }
+                        }
+                    }
+                }
+                
+                .tabArea {
+                    margin: 72px auto 0;
+                    .tabMenuGroup {
+                        .tabMenu {
+                            gap: 16px;
+                            .tabItem {
+                                .tabName {
+                                    font-size: 24px; line-height: 29px;
+                                    &.on {
+                                        &::before {
+                                            content:""; width: 8px; height: 8px; left: calc(50% - 4px); top: -12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .more {
+                            font-size: 14px;
+                        }
+                    }
+                    .tabContianer {
+                        margin-top: 28px;
+                    }
+                    .mainTabSwiper {
+                        .swiper-wrapper {
+                            width: calc(100% + 40px); padding: 0 20px; margin-left: -20px;
+                            .swiper-slide {
+                                width: 240px; flex-grow: 0; flex-shrink: 0; margin-left: 20px;
+                                &:first-child {margin-left: 0;}
+                                .eyebrow {
+                                    width: max-content; min-width: 80px; height: 33px; padding: 6px 12px; border-radius: 8px; border: 1px solid #B8CEFF; align-self: center;
+                                    color: #4250A3; font-size: 16px; font-style: normal; font-weight: 700; line-height: 19px; display: block;
+                                }
+                                .link {
+                                    width: 100%; display: block;
+                                }
+                                dl {
+                                    width: 100%; margin-top: 12px;
+                                    dt {
+                                        width: 100%; height: 54px; color: #222; font-size: 20px; font-weight: 500; line-height: 27px; @include line(2);
+                                    }
+                                    dd {
+                                        width: 100%; height: 44px; margin-top: 12px; color: #666; font-size: 16px; font-weight: 400; line-height: 22px; @include line(2);
+                                    }
+                                }
+                                .date {
+                                    width: 100%; margin-top: 24px; color: #666; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal; display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+

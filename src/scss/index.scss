@@ -1,0 +1,26 @@
+@import './com/maxin';
+@import 'font';
+@import './var/var';
+@import 'default';
+@import 'formBasic';
+@import './pub/public';
+@import './lyt/layout';
+@import './com/common';
+@import './cpt/cptHeader';
+@import './cpt/cptFooter';
+@import './cpt/cptMain';
+@import './plugin';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

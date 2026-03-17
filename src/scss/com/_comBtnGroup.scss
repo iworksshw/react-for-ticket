@@ -1,0 +1,61 @@
+/* --------------------------- 버튼그룹 --------------------------- */
+.comBtnGroup {
+    width: 100%; margin-top: 60px; display: flex; justify-content: space-between;
+    .alignL {
+        width: 100%; display: flex; justify-content: flex-start;
+        .btnBox {
+            width: 100%; display: flex; justify-content: flex-start;
+        }
+    }
+    .alignC {
+        width: 100%; display: flex; justify-content: center;
+        .btnBox {
+            width: 100%; display: flex; justify-content: center;
+        }
+    }
+    .alignR{
+        width: 100%; display: flex; justify-content: flex-end;
+        .btnBox {
+            width: 100%; display: flex; justify-content: flex-end;
+        }
+    }
+    .btnBox {
+        display: flex; gap: 12px;
+        &.cta {
+            .btn {
+                width: 240px;
+                &.xl {width: 280px;}
+                &.lg {width: 280px;}
+                &.sm {width: 180px;}
+            }
+        }
+    }
+    @include media('mobile') {
+        margin-top: 40px;
+        .btnBox {
+            gap: 8px;
+            &.cta {
+                &:has(.btn:nth-child(2)) {
+                    .btn, .btn.xl, .btn.lg, .btn.sm {width: calc(50% - 4px);}
+                }
+                .btn, .btn.xl, .btn.lg, .btn.sm {width: 100%;}
+                &.oneOne {
+                    flex-wrap: wrap;
+                    .btn {width: 100% !important;}
+                }
+                &.oneTwo {
+                    flex-wrap: wrap;
+                    .btn:nth-child(1) {width: 100% !important;}
+                    .btn:nth-child(2) {width: calc(50% - 4px) !important;}
+                    .btn:nth-child(3) {width: calc(50% - 4px) !important;}
+                }
+                &.twoOne {
+                    flex-wrap: wrap;
+                    .btn:nth-child(1) {width: calc(50% - 4px) !important;}
+                    .btn:nth-child(2) {width: calc(50% - 4px) !important;}
+                    .btn:nth-child(3) {width: 100% !important;}
+                }
+            }
+        }
+    }
+}

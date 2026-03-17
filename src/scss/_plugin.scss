@@ -1,0 +1,163 @@
+.tui-datepicker-input > input {
+    width: 100%; height: 100%; padding-left: 12px; font-size: 14px; border: 1px solid #bbbbbb; border-radius: 4px; background: #fff url(/common/images/common/ic_24_calendar.svg) right 10px center no-repeat !important;
+}
+.tui-datepicker-input * {
+    border-radius: 20px;
+}
+.tui-calendar .tui-calendar-header-inner {
+    padding: 24px 20px 12px 20px; height: auto;
+}
+.tui-calendar .tui-calendar-header {
+    border-radius: 20px; border-bottom: none;
+}
+.tui-calendar .tui-calendar-title {
+    color: var(--text-color-G900); font-size: rem(18px); font-weight: 400; line-height: 160%;
+}
+.tui-calendar .tui-calendar-btn-prev-month {
+    left: 20px; top: 24px; border-radius: 50%; display: flex; width: 30px; height: 30px; padding: 10px; justify-content: center; align-items: center; border-radius: 50px; border: 1px solid var(--border-color-G300);
+}
+.tui-calendar.tui-calendar-year .tui-calendar-btn-prev-year, .tui-calendar.tui-calendar-year .tui-calendar-btn-next-year {
+    left: 20px; top: 24px; border-radius: 50%; display: flex; width: 30px; height: 30px; padding: 10px; justify-content: center; align-items: center; border-radius: 50px; border: 1px solid var(--border-color-G300);
+}
+.tui-calendar.tui-calendar-month .tui-calendar-btn-prev-year, .tui-calendar.tui-calendar-month .tui-calendar-btn-next-year {
+    left: 20px; top: 24px; border-radius: 50%; display: flex; width: 30px; height: 30px; padding: 10px; justify-content: center; align-items: center; border-radius: 50px; border: 1px solid var(--border-color-G300);
+}
+.tui-calendar .tui-calendar-btn-next-month {
+    right: 20px; top: 24px; border-radius: 50%; display: flex; width: 30px; height: 30px; padding: 10px; justify-content: center; align-items: center; border-radius: 50px; border: 1px solid var(--border-color-G300);
+}
+.tui-calendar .tui-calendar-title-today {
+    border-radius: 0;
+}
+.tui-calendar-body {
+    padding: 8px 12px; position: relative;
+
+    &::before {
+        content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--bg-color-B500); position: absolute; right: 50px; bottom: 35px;
+    }
+
+    &::after {
+        content: '오늘'; display: block; position: absolute; right: 20px; bottom: 16px; color: var(--text-color-G900); font-size: rem(16px); font-weight: 600; line-height: 160%;
+    }
+}
+.tui-calendar th, .tui-calendar td {
+    color: var(--text-color-G800); font-size: rem(16px) !important; font-weight: 400; line-height: 160%; 
+}
+.tui-calendar .tui-calendar-body-header th {
+    color: var(--text-color-G800); font-size: rem(14px) !important; font-weight: 500; line-height: 160%;
+}
+.tui-calendar .tui-calendar-today {
+    color: var(--text-color-G900); font-weight: 600; position: relative;
+
+    &::before {
+        content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--bg-color-B500); position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
+    }
+}
+.tui-datepicker {
+    width: 360px;
+}
+.tui-datepicker-body {
+    width: 100%;
+}
+.tui-calendar-container {
+    width: 100%;
+}
+.tui-calendar {
+    width: 100%;
+}
+.tui-datepicker .tui-is-selectable.tui-is-selected, .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected {
+    border-radius: 50%; background: var(--color-primary-blue-900); width: 40px; height: 40px; 
+}
+.tui-calendar th, .tui-calendar td {
+    height: 46px;
+}
+.tui-datepicker .tui-is-selectable {
+    &:hover {
+        background: var(--color-primary-blue-900); color: #fff; width: 40px; height: 40px; border-radius: 50%;
+    }
+}
+.tui-datepicker .tui-is-selectable{
+    &:hover {
+        background: var(--color-primary-blue-900); color: #fff; width: 40px; height: 40px; border-radius: 50%;
+    }
+}
+.tui-calendar .tui-calendar-title-today {
+    background: var(--bg-color-G100);
+}
+
+// month
+.tui-calendar-month {
+    .tui-calendar-body, .tui-calendar-year .tui-calendar-body {
+        width: auto; border-radius: 0 0 20px 20px; background: var(--bg-color-G200); 
+    }
+    .tui-calendar-body {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+    .tui-datepicker .tui-is-selectable{
+        &:hover {
+            background: var(--color-primary-blue-900); color: #fff; 
+        }
+    }
+    tbody {
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 8px; padding: 16px;
+    }
+    .tui-calendar-month-group {
+        display: contents;
+
+        td {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 8px; border: 1px solid var(--border-color-G300); background: #fff; color: var(--text-color-G800); font-size: rem(16px); font-weight: 400; line-height: 160%; padding: 12px 0 !important;
+
+            &.tui-is-selectable {
+                border-radius: 8px; width: 100%; height: 100%;
+
+                &:hover {
+                    background: var(--color-primary-blue-900); color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// year
+.tui-calendar-year {
+    .tui-calendar-body, .tui-calendar-year .tui-calendar-body {
+        width: auto; border-radius: 0 0 20px 20px; background: var(--bg-color-G200); 
+    }
+    .tui-calendar-body {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+    .tui-datepicker .tui-is-selectable{
+        &:hover {
+            background: var(--color-primary-blue-900); color: #fff; 
+        }
+    }
+    tbody {
+          display: grid; grid-template-columns: repeat(1, 1fr); gap: 8px; padding: 16px;
+    }
+    .tui-calendar-year-group {
+        display: contents;
+
+        td {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 8px; border: 1px solid var(--border-color-G300); background: #fff; color: var(--text-color-G800); font-size: rem(16px); font-weight: 400; line-height: 160%; padding: 8px 40px !important; width: 117px !important; height: 42px !important; margin: 0 auto;
+
+            &.tui-is-selectable {
+                border-radius: 8px; width: 100%; height: 100%;
+
+                &:hover {
+                    background: var(--color-primary-blue-900); color: #fff;
+                }
+            }
+        }
+    }
+}

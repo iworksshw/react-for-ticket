@@ -1,0 +1,353 @@
+/* --------------------------- GNB --------------------------- */
+@import '../../scss/com/maxin';
+
+.cptHeader {
+    width: 100%;
+    .headerArea {
+        max-width: 1920px; margin: 0 auto; padding: 32px 40px 0; display: flex; justify-content: space-between; align-items: center;
+
+        &:has(.gnbGroup .gnbBox .gnbCont .menuArea .depth1Group .depth1List:hover){
+            background: #fff;
+        }
+        &.active {
+            background: #fff;
+        }
+
+        .gnbGroup {
+            display: flex; justify-content: space-between; width: 100%; 
+
+            .logoBox {
+                height: 74px; display: flex; align-items: center; justify-content: center; gap: 24px;
+
+                .logo {
+                    a {
+                        display: inline-block; width: 160px; height: 46px; background: url('/common/images/common/logo_160_arex.svg') no-repeat center / 100%; vertical-align: middle;
+
+                        @include media('mobile') {
+                            width: 103px;
+                        }
+                    }
+                }
+
+                .logoSide {
+                    position: relative;
+                    a {
+                        display: inline-block; width: 125px; height: 26px; background: url('/common/images/common/logo_lotte.svg') no-repeat center / 100%; vertical-align: middle;
+
+                        @include media('mobile') {
+                            width: 97px;
+                        }
+                    }
+
+                    &::before {
+                        content: ''; display: inline-block; width: 1px; height: 26px; background: var(--border-color-G500); position: absolute; top: 50%; transform: translateY(-50%);
+                        margin-left: -12px;
+
+                        @include media('mobile') {
+                            height: 20px; margin-left: -8px;
+                        }
+                    }
+                }
+
+                @include media('mobile') {
+                    gap: 16px;
+                }
+            }            
+            
+
+            .gnbBox {
+                display: flex; flex-direction: column; gap: 12px;
+
+                // 상단
+                .gnbTop {
+                    .gnbTopArea {
+                        .depth1Group {
+                            display: flex; align-items: center; justify-content: flex-end; height: 18px;
+
+                            > li {
+                                font-size: rem(15px); font-weight: 400; line-height: 1.2; 
+
+                                &.depth1List {
+                                    padding: 0 12px; position: relative;
+                                }
+
+                                &:not(:last-child) {
+                                    &::after {
+                                        content: ''; display: block; width: 1px; height: 12px; background: var(--border-color-G400); position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+                                    }
+                                }
+
+                                &:last-child {
+                                    padding-right: 10px;
+                                }
+
+                                .depth1Name {
+                                    display: inline-block; font-size: rem(15px); color: var(--text-color-G600); font-weight: 400;
+
+                                    &[target="_blank"] {
+                                        &::after {
+                                            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/common/images/common/ic_16_link.svg') no-repeat center / contain; margin: 0 0 2px 2px; vertical-align: middle;
+                                        }
+                                    }
+                                }                            
+
+                            }
+
+                        }
+                    }
+
+                    @include media('pcs') {
+                        display: none;
+                    }
+                }
+
+                // gnb 하단
+                .gnbCont {  
+                    display: flex; align-items: flex-start; justify-content: flex-end;
+
+                    // 메뉴
+                    .menuArea {
+                
+                        .depth1Group {
+                            display: flex; align-items: flex-start; justify-content: center;
+                        
+                            .depth1List {
+                                height: 76px; padding: 0 20px 32px 20px; line-height: normal; align-content: center;
+                                &:first-child {padding-left: 0;}
+                                &:last-child {padding-right: 0;}
+
+                                .depth1Name {
+                                    font-size: rem(20px); font-weight: 500; color: var(--text-color-G900);
+                                }      
+                                &:hover {
+                                    .depth2Area {
+                                        display: block;
+                                    }
+                                }                    
+                                
+                            }
+
+                        }      
+                        
+                        .depth2Area {
+                            width: 100%; z-index: 13; position: absolute; left: 0px; top: 138px; display: none;
+
+                            .depth2Box {
+                                max-width: 1920px; margin: 0 auto; background: #fff; border-top: 1px solid var(--border-color-G300); box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.1); padding: 50px 40px 80px 40px; display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; row-gap: 32px; min-height: 256px; height: auto; box-sizing: border-box;
+
+                                .depth2Tit {
+                                    display: flex; flex-direction: column; gap: 8px; min-width: 400px; padding: 12px 0;
+
+                                    .mainTit {
+                                        color: var(--text-color-G900); font-size: rem(30px); font-weight: 600; line-height: 150%; 
+                                    }
+                                    .subTit {
+                                        color: var(--text-color-G600); font-size: rem(18px); font-weight: 400; line-height: 160%;
+                                    }
+                                }
+
+                                .depth2Group {
+                                    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+                                    gap: 20px 20px; max-width: 1180px; width: 100%;
+
+                                    .depth2List {
+                                        .depth2Name {
+                                            display: flex; min-width: 220px; padding: 12px 20px; justify-content: space-between; align-items: center; border-radius: 8px; background: var(--bg-color-G200); color: var(--text-color-G800); transition: all 0.2s ease;
+                                            color: var(--text-color-G800); font-size: rem(18px); font-weight: 400; line-height: 160%;
+                                            
+                                            &::after {
+                                                content: ''; display: inline-block; width: 20px; height: 20px; background: url('/common/images/common/ic_20_arr_off.svg') no-repeat center / 100%; transition: all 0.2s ease;
+                                            }
+
+                                            &:hover {
+                                                background: var(--bg-color-B500); color: #fff;
+
+                                                &::after {
+                                                    content: '';background: url('/common/images/common/ic_20_arr_on.svg');
+                                                }
+                                            }
+                                        }
+                                    }
+                                } 
+
+                                @include media('pcs') {
+                                    justify-content: flex-start; flex-direction: column; height: auto;
+                                }
+                            }    
+                            
+                            @include media('pcs') {
+                                display: none;
+                            }
+                        } 
+                        
+                        @include media('pcs') {
+                            display: none;
+                        }
+
+                    }
+
+                    // 검색, 장바구니, 개인정보
+                    .quickArea {
+                        display: flex; gap: 8px; margin: 0 8px 0 40px;
+
+                        > button {
+                            width: 44px; height: 44px; padding: 9px;
+
+                            > img {
+                                width: 100%;
+                            }
+
+                            @include media('mobile') {
+                                width: 32px; height: 32px; padding: 4px;
+                            }                        
+
+                        }
+
+                        @include media('pcs') {
+                            display: none;
+                        }
+
+                        @include media('mobile') {
+                            gap: 0; 
+                        }                    
+
+                    }
+
+                    // 사이트맵
+                    .sitemapArea {
+                        position: relative;
+
+                        .openBtn {
+                            width: 44px; height: 44px; padding: 9px; display: flex; justify-content: center; align-items: center;
+
+                            > img {
+                                width: 100%;
+                            }
+
+                            @include media('mobile') {
+                                width: 32px; height: 32px; padding: 4px;
+                            }
+                        }
+
+                        .sitemap {
+                            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 99; transition: all 0.3s ease;    
+                            // opacity: 0; visibility: hidden;
+                            display: none;
+                            
+                            &.active {
+                                // opacity: 1; visibility: visible;
+                                display: block;
+                            }
+                            
+                            .sitemapInner {
+                                position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+                                width: 100%; max-width: 1180px; transition: transform 0.4s ease;   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+                                
+                                .sitemapHead {
+                                    background: var(--bg-color-B500); border-radius: 20px 20px 0 0; padding: 16px 32px;
+
+                                    .tit {
+                                        color: #fff; font-size: rem(24px); font-weight: 600; line-height: 150%;
+                                    }
+                                }
+
+                                .sitemapCont {
+                                    nav {
+                                        background: #fff; border-radius: 0 0 20px 20px; width: 100%;
+                                        padding: 32px 12px 40px 0;
+
+                                        .depth1Wrap {
+                                            height: 660px; overflow: auto; padding-left: 40px; 
+
+                                            &::-webkit-scrollbar {
+                                                width:6px; background:#fff;
+                                            }
+                                            &::-webkit-scrollbar-thumb {
+                                                background:rgba(87, 87, 87, 0.54); border-radius:8px; overflow:hidden;
+                                            }
+
+                                            .depth1Group {
+                                                display: flex; gap: 60px; flex-direction: column;
+
+                                                > li {
+                                                    display: flex; gap: 20px; flex-direction: column;
+
+                                                    .depth1Name {
+                                                        color: var(--text-color-B500); font-size: rem(24px); font-weight: 600; line-height: 150%; border-bottom: 1px solid var(--border-color-G300); width: 100%; padding-bottom: 8px;
+                                                    }
+
+                                                    .depth2Group {
+                                                        display: flex; flex-wrap: wrap; row-gap: 40px;                                                  
+
+                                                        .depth2List {
+                                                            min-width: 204px; display: flex; flex-direction: column; gap: 16px;
+
+                                                            .depth2Name {
+                                                                display: block; color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%;
+                                                            }
+
+                                                            .depth3Group {
+                                                                display: flex; flex-direction: column; gap: 8px;
+
+                                                                .depth3List {
+                                                                    
+                                                                    .depth3Name {
+                                                                        display: inline-block; text-decoration: none; position: relative;
+                                                                        &::after {
+                                                                            content: ""; position: absolute; left: 0; right: 0; height: 13px; background: var(--bg-color-B500); opacity: 0.2; top: 50%; transform: scaleX(0); transform-origin: center; transition: transform 0.3s ease;
+                                                                        }
+                                                                        &:hover {
+                                                                            &::after {
+                                                                                transform: scaleX(1);
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                }
+                                                            }
+
+                                                            &.depth2ListInfo {
+                                                                .depth2Name {
+                                                                    min-width: 428px;
+                                                                }
+                                                                .depth3Group {
+                                                                    display: flex; flex-direction: column; flex-wrap: wrap; min-width: 428px; height: 218px; gap: 8px 12px;
+                                                                }
+                                                            }
+
+                                                        }
+
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }  
+                                
+                                .sitemapFoot {
+                                    .closeBtn {
+                                        width: 32px; height: 32px; background: url('/common/images/common/ic_32_close.svg') no-repeat center / 100%; vertical-align: middle; position: absolute; right: 32px; top: 16px;
+                                    } 
+                                }
+
+                            }  
+
+                            @include media('pcs') {
+                                display: none;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+
+        @include media('tablet') {
+            padding: 12px 20px;
+        }
+
+        @include media('mobile') {
+            padding: 12px 16px; 
+        }
+        
+    }
+}
